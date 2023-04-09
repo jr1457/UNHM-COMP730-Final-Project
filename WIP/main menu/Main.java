@@ -32,6 +32,7 @@ public class Main {
             case "3":
                 break;
             case "4":
+                DeleteNote.main(args);
                 break;
             default:
                 System.out.println("An error occured");
