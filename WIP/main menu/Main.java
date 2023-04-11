@@ -9,6 +9,7 @@ public class Main {
         System.out.println("2: Read Note");
         System.out.println("3: Open Note");
         System.out.println("4: Delete Note");
+        System.out.println("5: Clear note");
         String userInput;
         //int userOption1 = 1;
         //int userOption2 = 2;
@@ -34,6 +35,9 @@ public class Main {
             case "4":
                 DeleteNote.main(args);
                 break;
+            case "5":
+            	ClearNote.main(args);
+            	break;
             default:
                 System.out.println("An error occured");
         }
