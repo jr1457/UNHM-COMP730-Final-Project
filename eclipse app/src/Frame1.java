@@ -82,9 +82,31 @@ public class Frame1 {
 					public String getNoteData() {
 						return note.getNoteData();
 					}
+						
+				}
+				
+				class CreateNote {
+					public static void main() {
+						Client client = new Client();
+						client.buildImmediately();
+						try {
+							File myNote = new File(client.getNoteName() + ".txt");
+							if (myNote.createNewFile()) {
+								System.out.println("File created: " + myNote.getName());
+							} else {
+								System.out.println("File already exists");
+							}
+							FileWriter myNoteWriter = new FileWriter(myNote);
+							myNoteWriter.write(client.getNoteData());
+							myNoteWriter.close();
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+						
+					}
 					
 				}
-
+				CreateNote.main();
 			}
 		});
 		btnNewButton.setBounds(10, 36, 106, 23);
