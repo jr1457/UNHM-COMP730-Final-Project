@@ -68,7 +68,7 @@ public class Frame1 {
 				String input = JOptionPane.showInputDialog("Enter the File Name");
 				lblNewLabel.setText(input);
 				
-				public class Client {
+				 class Client {
 					private NoteBuilder note = null;
 					public void buildImmediately() {
 						note = new NoteBuilder.Builder()
