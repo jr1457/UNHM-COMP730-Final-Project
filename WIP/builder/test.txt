@@ -1,0 +1,29 @@
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String userData = textField.getText();
+				String input = JOptionPane.showInputDialog("Enter the File Name");
+//				lblNewLabel.setText(input);
+//				
+//				File myNote = new File(input + ".txt");
+//	            try {
+//		            FileWriter myNoteWriter = new FileWriter(myNote);
+//					myNoteWriter.write(userData);
+//					myNoteWriter.close();
+//				} catch (IOException e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				}
+				
+				class CreateNoteClient {
+				    private Note note = null;
+				    public void build() {
+				        note = new Note.Builder()
+				            .setNoteName(input)
+				            .setNoteContent(textField.getText())
+				            .build();
+				    }
+				}
+				
+				
+			}
+		});

@@ -18,7 +18,7 @@ import java.io.IOException;
 public class Frame1 {
 
 	private JFrame frame;
-	private JTextField textField;
+	public JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -68,17 +68,23 @@ public class Frame1 {
 				String input = JOptionPane.showInputDialog("Enter the File Name");
 				lblNewLabel.setText(input);
 				
-				File myNote = new File(input + ".txt");
-	            try {
-		            FileWriter myNoteWriter = new FileWriter(myNote);
-					myNoteWriter.write(userData);
-					myNoteWriter.close();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				public class Client {
+					private NoteBuilder note = null;
+					public void buildImmediately() {
+						note = new NoteBuilder.Builder()
+								.setNoteName(input)
+								.setNoteData(userData)
+								.build();
+					}
+					public String getNoteName() {
+						return note.getNoteName();
+					}
+					public String getNoteData() {
+						return note.getNoteData();
+					}
+					
 				}
-				
-				
+
 			}
 		});
 		btnNewButton.setBounds(10, 36, 106, 23);
