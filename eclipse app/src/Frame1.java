@@ -82,11 +82,8 @@ public class Frame1 {
 					public String getNoteData() {
 						return note.getNoteData();
 					}
-						
-				}
-				
-				class CreateNote {
-					public static void main() {
+					
+					public void createNote() {
 						Client client = new Client();
 						client.buildImmediately();
 						try {
@@ -94,20 +91,20 @@ public class Frame1 {
 							if (myNote.createNewFile()) {
 								System.out.println("File created: " + myNote.getName());
 							} else {
-								System.out.println("File already exists");
+							System.out.println("File already exists");
 							}
 							FileWriter myNoteWriter = new FileWriter(myNote);
 							myNoteWriter.write(client.getNoteData());
 							myNoteWriter.close();
+							
 						} catch (IOException e) {
 							e.printStackTrace();
-						}
-						
+						}						
 					}
-					
 				}
-				CreateNote.main();
-			}
+				Client client = new Client();
+				client.createNote();
+			}			
 		});
 		btnNewButton.setBounds(10, 36, 106, 23);
 		frame.getContentPane().add(btnNewButton);
