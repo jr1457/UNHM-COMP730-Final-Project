@@ -1,8 +1,18 @@
-	import java.io.FileReader;
-	import java.io.IOException;
-	import java.awt.FileDialog;
-	import java.awt.Frame;
+import java.io.FileReader;
+import java.io.IOException;
+import java.awt.FileDialog;
+import java.awt.Frame;
+import java.util.Properties;
+import java.util.Scanner;
 
+import javax.swing.JFileChooser;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+	
 	class Read
 	{
 
@@ -45,23 +55,21 @@
 			return contents;
 		}
 		
-		public static void main(String[] args)
+		public static void main(String[] args) throws IOException
 		{
-			/*
+			
 			java.util.Scanner scanner = new java.util.Scanner(System.in);		
 			System.out.print("Enter file name along with its location: ");
 			String fileName = scanner.nextLine();
-			*/
-			
-			FileDialog fd = new FileDialog(new Frame(), "Open a file", FileDialog.LOAD);
-			fd.setVisible(true);
-			String fileName = fd.getDirectory() + "/" + fd.getFile();
+			System.out.println(fileName);
 			
 			Read r = new Read(fileName);
 			String contents = r.readFromFile();
 			
 			System.out.println(contents);
+	        
+	        }
 		}
-	}
+	
 
 	
