@@ -19,6 +19,7 @@ public class Frame1 {
 	private JFrame frame; 
 	// For user input
 	public JTextField textField;
+	private JButton btnNewButton_1;
 
 	/**
 	 * Launch the application.
@@ -98,6 +99,15 @@ public class Frame1 {
 		btnNewButton.setBounds(10, 36, 106, 23);
 		// Adds the JButton object to the JFrame object.
 		frame.getContentPane().add(btnNewButton);
+		
+		btnNewButton_1 = new JButton("Read Note");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ReadButton.main(null);
+			}
+		});
+		btnNewButton_1.setBounds(10, 70, 106, 23);
+		frame.getContentPane().add(btnNewButton_1);
 		
 	}
 }
