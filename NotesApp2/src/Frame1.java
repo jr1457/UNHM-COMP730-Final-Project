@@ -20,6 +20,7 @@ public class Frame1 {
 	// For user input
 	public JTextField textField;
 	private JButton btnNewButton_1;
+	private JButton btnNewButton_2;
 
 	/**
 	 * Launch the application.
@@ -108,6 +109,17 @@ public class Frame1 {
 		});
 		btnNewButton_1.setBounds(10, 70, 106, 23);
 		frame.getContentPane().add(btnNewButton_1);
+		
+		btnNewButton_2 = new JButton("Update Note");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input = JOptionPane.showInputDialog("Enter the File Name To Update");
+				String userData = textField.getText();
+				Update.main(input, userData);
+			}
+		});
+		btnNewButton_2.setBounds(10, 104, 106, 23);
+		frame.getContentPane().add(btnNewButton_2);
 		
 	}
 }
