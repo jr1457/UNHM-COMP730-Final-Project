@@ -7,7 +7,7 @@ public class CreateNoteTest {
 
 	@Test
 	public void test() {
-		String testNoteName = "test";
+		String testNoteName = "test.txt";
 		String testNoteData = "hello world";
 		Client client = new Client(testNoteName, testNoteData);
 		client.buildImmediately();
