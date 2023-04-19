@@ -125,12 +125,14 @@ public class Frame1 {
 		deleteButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input = JOptionPane.showInputDialog("Enter the File Name To Delete");
-				File file = new File(input);
-				if (file.delete()) {
-					  System.out.println("Deleted the file: ");
+				//https://stackoverflow.com/questions/15853112/joptionpane-yes-no-option
+				if (JOptionPane.showConfirmDialog(null, "Are you sure?", "Warning: Deleting File: " + input,
+				        JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+					DeleteNote.main(input);
 				} else {
-					System.out.println("Failed");
+				    // no option
 				}
+			 
 			}
 		});
 		deleteButton.setBounds(10, 132, 106, 23);
