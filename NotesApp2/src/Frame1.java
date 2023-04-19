@@ -121,6 +121,21 @@ public class Frame1 {
 		btnNewButton_2.setBounds(10, 104, 106, 23);
 		frame.getContentPane().add(btnNewButton_2);
 		
+		JButton deleteButton = new JButton("Delete Note");
+		deleteButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input = JOptionPane.showInputDialog("Enter the File Name To Delete");
+				File file = new File(input);
+				if (file.delete()) {
+					  System.out.println("Deleted the file: ");
+				} else {
+					System.out.println("Failed");
+				}
+			}
+		});
+		deleteButton.setBounds(10, 132, 106, 23);
+		frame.getContentPane().add(deleteButton);
+		
 	}
 }
 /*
