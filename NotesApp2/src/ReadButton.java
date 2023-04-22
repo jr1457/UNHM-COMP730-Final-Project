@@ -56,6 +56,7 @@ public class ReadButton extends JFrame implements ActionListener{
 		if (event.getSource() == btnOpen) {
 			String fileName = JOptionPane.showInputDialog(this, "Enter file name: ");
 			if (fileName != null && fileName.length() != 0) {
+				fileName += ".txt";
 				Read r = new Read(fileName);
 				String contents = r.readFromFile();
 				txtBox.setText(contents);

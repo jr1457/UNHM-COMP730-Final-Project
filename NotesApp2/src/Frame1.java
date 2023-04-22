@@ -11,6 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 import javax.swing.JLabel;
 
 public class Frame1 {
@@ -18,7 +19,7 @@ public class Frame1 {
 	// The JFrame object is created to hold the components of a GUI. 
 	private JFrame frame; 
 	// For user input
-	public JTextField textField;
+	public JTextArea textField;
 	private JButton btnNewButton_1;
 	private JButton btnNewButton_2;
 
@@ -64,7 +65,8 @@ public class Frame1 {
 		// The JFrame layout is set to null.
 		frame.getContentPane().setLayout(null);
 		// Creates a new object for user input.
-		textField = new JTextField();
+		textField = new JTextArea();
+		textField.setLineWrap(true);
 		// Set the position and size of the JTextField object.
 		textField.setBounds(137, 36, 287, 214);
 		// Adds the JTextField object to the JFrame object,
@@ -136,6 +138,18 @@ public class Frame1 {
 		deleteButton.setBounds(10, 132, 106, 23);
 		frame.getContentPane().add(deleteButton);
 		
+		JButton clearButton = new JButton("Clear Note");
+		clearButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+				int result = JOptionPane.showConfirmDialog(null, "Are you sure?", "Confirm Dialog Box", JOptionPane.YES_NO_OPTION);
+				if (result == JOptionPane.YES_OPTION) {
+					textField.setText("");
+					//https://steemit.com/utopian-io/@will-ugo/java-gui-confirm-dialogs-using-eclipse-ide
+				}
+			}
+		});
+		clearButton.setBounds(10, 160, 106, 23);
+		frame.getContentPane().add(clearButton);
 	}
 }
 /*

@@ -42,7 +42,6 @@ import java.io.IOException;
 			int ch;
 			try (FileReader freader = new FileReader(fileName))
 			{
-	
 				while((ch = freader.read()) != -1)
 				{
 					contents += (char)ch;
