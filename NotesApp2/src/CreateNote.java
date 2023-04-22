@@ -6,7 +6,7 @@ public class CreateNote {
 	public static void create(Client client) {
 		try {
 			// Creates a new file object with the note name, provided by the client and adds the .txt extension.
-			File myNote = new File(client.getNoteName() + ".txt");
+			File myNote = new File(client.getNoteName());
 	
 			if (myNote.createNewFile()) {
 				System.out.println("File created: " + myNote.getName());
