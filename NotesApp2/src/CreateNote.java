@@ -1,9 +1,21 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+/**
+ * The CreateNote class creates a new .txt file and checks if it already exists.
+ * The note data provided by the client, is written to the note file.
+ * 
+ * @author James and Eshwar
+ *
+ */
 
 public class CreateNote {
+	/**
+	 * This static method writes the given client data onto the specified file by the given client.
+	 * @param client The client specifies the file name and data to be written.
+	 */
 	public static void create(Client client) {
+
 		try {
 			// Creates a new file object with the note name, provided by the client and adds the .txt extension.
 			File myNote = new File(client.getNoteName());

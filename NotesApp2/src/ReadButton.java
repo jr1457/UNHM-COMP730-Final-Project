@@ -9,14 +9,33 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
-
+/**
+ * The ReadButton class implements the read button. It uses the Read class to read the
+ * contents of a file and display them on the GUI.
+ * 
+ * @author Eshwar
+ *
+ */
 public class ReadButton extends JFrame implements ActionListener{
 	// Holds the components.
-	private JPanel contentPane;
-	private JTextArea txtBox;
-	private JButton btnOpen;
 	/**
-	 * Launch the application.
+	 * This instance variable is a container for holding components in a frame.
+	 */
+	private JPanel contentPane;
+	/**
+	 * This instance variable is a component that displays the contents of a .txt file.
+	 */
+	private JTextArea txtBox;
+	/**
+	 * This instance variable is a JButton that when it is clicked, the actionPerformed 
+	 * method opens and reads a .txt file.s
+	 */
+	private JButton btnOpen;
+
+	/**
+	 * Launch the application and run the button click event.
+	 * 
+	 * @param args Arguments get passed through here.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -32,7 +51,7 @@ public class ReadButton extends JFrame implements ActionListener{
 	}
 
 	/**
-	 * Create the frame.
+	 * This constructor creates an object that displays the window. 
 	 */
 	public ReadButton() {
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -51,7 +70,9 @@ public class ReadButton extends JFrame implements ActionListener{
 		
 		setContentPane(contentPane);
 	}
-	
+	/**
+	 * When the button is clicked the user is asked to enter the file name to open. 
+	 */
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource() == btnOpen) {
 			String fileName = JOptionPane.showInputDialog(this, "Enter file name: ");

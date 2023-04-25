@@ -12,30 +12,55 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-	
+	/**
+	 * The main purpose of the Read class is to get user input, 
+	 * read the contents of a .txt file, and return it as a string. 
+	 * 
+	 * @author Eshwar
+	 *
+	 */
 	class Read
 	{
 
 		private String fileName;
 		
+		/**
+		 * Default constructor that creates an empty object.
+		 */
 		public Read()
 		{
 			fileName = null;
 		}
 
+		/**
+		 * Parameterized constructor that creates an object initialized with the given file name.
+		 * @param file The name of the file to read from.
+		 */
 		public Read(String file)
 		{
 			fileName = file;
 		}
 		
+		/**
+		 * Get the file name.
+		 * @return String file name.
+		 */
 		public String getFileName() {
 			return fileName;
 		}
 		
+		/**
+		 * Set the file name.
+		 * @param file The name of the file to read from.
+		 */
 		public void setFileName(String file) {
 			fileName = file;
 		}
 		
+		/**
+		 * This method reads the contents of the file and returns it.
+		 * @return String contents of the file.
+		 */
 		public String readFromFile()
 		{
 			String contents = "";
@@ -54,6 +79,11 @@ import java.io.IOException;
 			return contents;
 		}
 		
+		/**
+		 * 
+		 * @param args Arguments get passed through here.
+		 * @throws IOException An IOException may be thrown upon execution of the program. 
+		 */
 		public static void main(String[] args) throws IOException
 		{
 			

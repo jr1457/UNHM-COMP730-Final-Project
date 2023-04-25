@@ -13,12 +13,20 @@ import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.JLabel;
-
+/**
+ * The Frame1 class implements the create button, read button, update button, delete button
+ * and clear button, on a GUI.
+ * 
+ * @author James and Eshwar
+ *
+ */
 public class Frame1 {
 
 	// The JFrame object is created to hold the components of a GUI. 
 	private JFrame frame; 
-	// For user input
+	/**
+	 * For user input.
+	 */
 	public JTextArea textField;
 	private JButton btnNewButton_1;
 	private JButton btnNewButton_2;
@@ -27,6 +35,10 @@ public class Frame1 {
 	 * Launch the application.
 	 */
 	
+	/**
+	 * The main method of the application, where the visibility of the window is set.
+	 * @param args Arguments get passed through here.
+	 */
 	public static void main(String[] args) {
 		
 		// An instance is created on the Event Dispatch Thread.
@@ -47,6 +59,7 @@ public class Frame1 {
 	/**
 	 * Create the application.
 	 */
+	
 	public Frame1() {
 		// The initialize method is invoked, to initialize the GUI components.
 		initialize();
@@ -55,6 +68,7 @@ public class Frame1 {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	
 	private void initialize() {
 		// A new JFrame object is created. 
 		frame = new JFrame();
@@ -105,6 +119,7 @@ public class Frame1 {
 		
 		btnNewButton_1 = new JButton("Read Note");
 		btnNewButton_1.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
 				ReadButton.main(null);
 			}

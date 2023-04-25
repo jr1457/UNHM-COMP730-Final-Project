@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class UnitTesting {
+public class ReadTesting {
 
 	// Tester for getter and setter method of Read class.
 	@Test
