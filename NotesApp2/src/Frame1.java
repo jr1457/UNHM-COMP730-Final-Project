@@ -17,7 +17,7 @@ import javax.swing.JLabel;
  * The Frame1 class implements the create button, read button, update button, delete button
  * and clear button, on a GUI.
  * 
- * @author James and Eshwar
+ * @author James, Eshwar, Jonathan
  *
  */
 public class Frame1 {

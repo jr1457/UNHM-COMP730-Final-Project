@@ -5,7 +5,7 @@ import java.io.IOException;
  * The CreateNote class creates a new .txt file and checks if it already exists.
  * The note data provided by the client, is written to the note file.
  * 
- * @author James and Eshwar
+ * @author James, Eshwar, Jonathan
  *
  */
 

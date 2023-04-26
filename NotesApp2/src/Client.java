@@ -3,7 +3,7 @@
  * The Client class provides an interface to access properties from the NoteBuilder class
  * by encapsulating the NoteBuilder object.
  * 
- * @author James and Eshwar
+ * @author Jonathan and Eshwar
  *
  */
 public class Client {
