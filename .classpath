@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="eclipse app/src"/>
+	<classpathentry kind="src" path="NotesApp2/src"/>
+	<classpathentry excluding="main menu/|create note/|update note/|builder/|delete note/" kind="src" path="WIP"/>
+	<classpathentry kind="src" path="WIP/builder"/>
+	<classpathentry kind="src" path="WIP/create note"/>
+	<classpathentry kind="src" path="WIP/delete note"/>
+	<classpathentry kind="src" path="WIP/main menu"/>
+	<classpathentry kind="src" path="WIP/update note"/>
+	<classpathentry kind="output" path="NotesApp2/bin"/>
+</classpath>
