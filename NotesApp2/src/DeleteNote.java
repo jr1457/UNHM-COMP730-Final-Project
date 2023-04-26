@@ -6,6 +6,10 @@ import java.io.File;
  *
  */
 public class DeleteNote {
+	/**
+	 * 
+	 * @param fileName The param fileName specifies the name of the file to be deleted
+	 */
 	public static void main(String fileName) {
 		// Creates new file object with the name from fileName
 		File file = new File(fileName);
