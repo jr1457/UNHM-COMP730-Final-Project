@@ -4,8 +4,9 @@
 - Eshwar Senthilnathan
 - Jonathan Rooney
 
-### Simple note appliction
+### Simple note application
 - CRUD Interface
+- Eclipse WindowBuilder
 - Tested with JUnit
 
 ### Executable JAR File works with Java(TM) SE 19.0.2
