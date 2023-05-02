@@ -23,7 +23,7 @@ import javax.swing.JLabel;
 public class Frame1 {
 
 	// The JFrame object is created to hold the components of a GUI. 
-	private JFrame frame; 
+	private JFrame frmNo; 
 	/**
 	 * For user input.
 	 */
@@ -48,7 +48,7 @@ public class Frame1 {
 					// A new instance of the window.
 					Frame1 window = new Frame1();
 					// Window becomes visible.
-					window.frame.setVisible(true);
+					window.frmNo.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -71,27 +71,28 @@ public class Frame1 {
 	
 	private void initialize() {
 		// A new JFrame object is created. 
-		frame = new JFrame();
+		frmNo = new JFrame();
+		frmNo.setTitle("Note App");
 		// The size and position of the window.
-		frame.setBounds(100, 100, 450, 300);
+		frmNo.setBounds(100, 100, 450, 300);
 		// Add the default closing operation for the JFrame object.
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmNo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// The JFrame layout is set to null.
-		frame.getContentPane().setLayout(null);
+		frmNo.getContentPane().setLayout(null);
 		// Creates a new object for user input.
 		textField = new JTextArea();
 		textField.setLineWrap(true);
 		// Set the position and size of the JTextField object.
 		textField.setBounds(137, 36, 287, 214);
 		// Adds the JTextField object to the JFrame object,
-		frame.getContentPane().add(textField);
+		frmNo.getContentPane().add(textField);
 		textField.setColumns(10);
 		// New JLabel object created.
 		final JLabel lblNewLabel = new JLabel("");
 		// Set the position and size of the JLabel object. 
 		lblNewLabel.setBounds(10, 11, 46, 14);
 		// Add the JLabel object to the JFrame object.  
-		frame.getContentPane().add(lblNewLabel);
+		frmNo.getContentPane().add(lblNewLabel);
 		// Creates new JButton object.
 		JButton btnNewButton = new JButton("Create Note");
 		// Add actionListener to the object.
@@ -115,7 +116,7 @@ public class Frame1 {
 		// Set the position and size of the Jbutton object. 
 		btnNewButton.setBounds(10, 36, 106, 23);
 		// Adds the JButton object to the JFrame object.
-		frame.getContentPane().add(btnNewButton);
+		frmNo.getContentPane().add(btnNewButton);
 		
 		btnNewButton_1 = new JButton("Read Note");
 		btnNewButton_1.addActionListener(new ActionListener() {
@@ -125,7 +126,7 @@ public class Frame1 {
 			}
 		});
 		btnNewButton_1.setBounds(10, 70, 106, 23);
-		frame.getContentPane().add(btnNewButton_1);
+		frmNo.getContentPane().add(btnNewButton_1);
 		
 		btnNewButton_2 = new JButton("Update Note");
 		btnNewButton_2.addActionListener(new ActionListener() {
@@ -136,7 +137,7 @@ public class Frame1 {
 			}
 		});
 		btnNewButton_2.setBounds(10, 104, 106, 23);
-		frame.getContentPane().add(btnNewButton_2);
+		frmNo.getContentPane().add(btnNewButton_2);
 		
 		JButton deleteButton = new JButton("Delete Note");
 		deleteButton.addActionListener(new ActionListener() {
@@ -152,8 +153,8 @@ public class Frame1 {
 			 
 			}
 		});
-		deleteButton.setBounds(10, 132, 106, 23);
-		frame.getContentPane().add(deleteButton);
+		deleteButton.setBounds(10, 137, 106, 23);
+		frmNo.getContentPane().add(deleteButton);
 		
 		JButton clearButton = new JButton("Clear Note");
 		clearButton.addActionListener(new ActionListener() {
@@ -165,8 +166,8 @@ public class Frame1 {
 				}
 			}
 		});
-		clearButton.setBounds(10, 160, 106, 23);
-		frame.getContentPane().add(clearButton);
+		clearButton.setBounds(10, 171, 106, 23);
+		frmNo.getContentPane().add(clearButton);
 	}
 }
 /*
